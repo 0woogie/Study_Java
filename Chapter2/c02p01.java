@@ -1,4 +1,5 @@
 //2장 1번
+//원화를 입력받아 달러로 바꾸어 출력하는 프로그램
 import java.util.Scanner;
 
 public class c02p01 {
