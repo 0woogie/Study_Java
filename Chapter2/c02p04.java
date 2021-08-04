@@ -1,4 +1,5 @@
 //2장 4번
+//정수 3개를 입력받고 3개의 숫자 중 중간 크기의 수를 출력하는 프로그램
 import java.util.Scanner;
 
 public class c02p04 {
