@@ -1,4 +1,5 @@
 //2장 5번
+//정수를 3개 입력받고 이 3개의 수로 삼각형을 만들 수 있는지 판별하는 프로그램
 import java.util.Scanner;
 
 public class c02p05 {
