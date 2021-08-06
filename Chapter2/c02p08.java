@@ -33,6 +33,8 @@ public class c02p08 {
 			System.out.println("두 사각형이 충돌합니다.");
 		else
 			System.out.println("두 사각형이 충돌하지 않습니다.");
+		
+		scanner.close();
 	}
 
 }
