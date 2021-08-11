@@ -9,11 +9,12 @@ public class c03p14 {
 		Scanner scanner = new Scanner(System.in);
 		String[] course = {"Java", "C++", "HTML5", "컴퓨터구조", "안드로이드"};
 		int[] score = {95, 88, 76, 62, 55};
+		String s;
 		int count = 0;
 		while(true) {
 			count = 0;
 			System.out.print("과목 이름>>");
-			String s = scanner.next();
+			s = scanner.next();
 			if(s.equals("그만"))
 				break;
 			for(int i=0; i<course.length; i++) {
