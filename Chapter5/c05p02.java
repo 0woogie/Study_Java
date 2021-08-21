@@ -2,15 +2,15 @@ package c05;
 //5장 2번
 //ColorTV를 상속받은 IPTV 클래스 작성하기
 
-class TV2 {
+class TV {
 	private int size;
-	public TV2(int size) { this.size = size; }
+	public TV(int size) { this.size = size; }
 	protected int getSize() { return size; }
 }
 
-class ColorTV2 extends TV2 {
+class ColorTV extends TV {
 	private int color;
-	public ColorTV2(int size, int color) {
+	public ColorTV(int size, int color) {
 		super(size);
 		this.color = color;
 	}
@@ -19,7 +19,7 @@ class ColorTV2 extends TV2 {
 	}
 }
 
-class IPTV extends ColorTV2 {
+class IPTV extends ColorTV {
 	private String address;
 	public IPTV(String address, int size, int color) {
 		super(size, color);
