@@ -3,7 +3,7 @@ package c05;
 //Converter 클래스를 상속받아 km를 mile(마일)로 변환하는 Km2Mile 클래스를 작성하기
 import java.util.Scanner;
 
-abstract class Converter2 {
+abstract class Converter {
 	abstract protected double convert(double src);
 	abstract protected String getSrcString();
 	abstract protected String getDestString();
@@ -20,7 +20,7 @@ abstract class Converter2 {
 	}
 }
 
-class Km2Mile extends Converter2 {
+class Km2Mile extends Converter {
 	Km2Mile(double ratio){
 		this.ratio = ratio;
 	}
