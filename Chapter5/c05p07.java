@@ -2,15 +2,15 @@ package c05;
 //5장 7번
 //Point를 상속받아 3차원의 점을 나타내는 Point3D 클래스 작성하기
 
-class Point3 {
+class Point {
 	private int x, y;
-	public Point3(int x, int y) { this.x = x; this.y = y; }
+	public Point(int x, int y) { this.x = x; this.y = y; }
 	public int getX() { return x; }
 	public int getY() { return y; }
 	protected void move(int x, int y) {this.x = x; this.y = y;}
 }
 
-class Point3D extends Point3 {
+class Point3D extends Point {
 	private int z;
 	public Point3D(int x, int y, int z) {
 		super(x, y);
