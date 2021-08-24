@@ -2,15 +2,15 @@ package c05;
 //5장 8번
 //Point를 상속받아 양수의 공간에서만 점을 나타내는 PositivePoint 클래스 작성하기
 
-class Point4 {
+class Point {
 	private int x, y;
-	public Point4(int x, int y) { this.x = x; this.y = y; }
+	public Point(int x, int y) { this.x = x; this.y = y; }
 	public int getX() { return x; }
 	public int getY() { return y; }
 	protected void move(int x, int y) {this.x = x; this.y = y;}
 }
 
-class PositivePoint extends Point4 {
+class PositivePoint extends Point {
 	public PositivePoint() {
 		super(0, 0);
 	}
