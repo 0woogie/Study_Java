@@ -2,7 +2,7 @@ package c05;
 //5장 13번
 //도형의 구성을 묘사하는 인터페이스와 이를 구현하는 클래스 작성하기
 
-interface Shape1 {
+interface Shape {
 	final double PI = 3.14;
 	void draw();
 	double getArea();
@@ -12,9 +12,9 @@ interface Shape1 {
 	}
 }
 
-class Circle1 implements Shape1 {
+class Circle implements Shape {
 	private int r;
-	public Circle1(int r) {
+	public Circle(int r) {
 		this.r = r;
 	}
 	public void draw() {
@@ -27,7 +27,7 @@ class Circle1 implements Shape1 {
 
 public class c05p13 {
 	public static void main(String[] args) {
-		Shape1 donut = new Circle1(10);
+		Shape donut = new Circle(10);
 		donut.redraw();
 		System.out.println("면적은 " + donut.getArea());
 	}
