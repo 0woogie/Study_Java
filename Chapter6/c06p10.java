@@ -16,42 +16,35 @@ class Person {
 public class c06p10 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
+		Person[] p = new Person[2];
 		String name;
-		System.out.print("1번째 선수 이름>>");
-		name = scanner.next();
-		Person p1 = new Person(name);
-		System.out.print("2번째 선수 이름>>");
-		name = scanner.next();
-		Person p2 = new Person(name);
+		for(int i=0; i<p.length; i++) {
+			System.out.print((i+1) + "번째 선수 이름>>");
+			name = scanner.next();
+			p[i] = new Person(name);
+		}
 		scanner.nextLine();
 		
 		int n1, n2, n3;
+		int count = 0;
 		while(true) {
-			System.out.print("[" + p1.getName() + "]:<Enter>");
-			scanner.nextLine();
-			n1 = (int)(Math.random()*3+1);
-			n2 = (int)(Math.random()*3+1);
-			n3 = (int)(Math.random()*3+1);
-			System.out.print("\t" + n1 + " " + n2 + " " + n3 + " ");
-			if((n1 == n2) && (n2 == n3)) {
-				System.out.println(p1.getName() + "님이 이겼습니다!");
-				break;
+			for(int i=0; i<p.length; i++) {
+				System.out.print("[" + p[i].getName() + "]:<Enter>");
+				scanner.nextLine();
+				n1 = (int)(Math.random()*3+1);
+				n2 = (int)(Math.random()*3+1);
+				n3 = (int)(Math.random()*3+1);
+				System.out.print("\t" + n1 + " " + n2 + " " + n3 + " ");
+				if((n1 == n2) && (n2 == n3)) {
+					System.out.println(p[i].getName() + "님이 이겼습니다!");
+					count++;
+					break;
+				}
+				else
+					System.out.println("아쉽군요!");
 			}
-			else
-				System.out.println("아쉽군요!");
-			
-			System.out.print("[" + p2.getName() + "]:<Enter>");
-			scanner.nextLine();
-			n1 = (int)(Math.random()*3+1);
-			n2 = (int)(Math.random()*3+1);
-			n3 = (int)(Math.random()*3+1);
-			System.out.print("\t" + n1 + " " + n2 + " " + n3 + " ");
-			if((n1 == n2) && (n2 == n3)) {
-				System.out.println(p2.getName() + "님이 이겼습니다!");
+			if(count == 1)
 				break;
-			}
-			else
-				System.out.println("아쉽군요!");
 		}
 		scanner.close();
 	}
