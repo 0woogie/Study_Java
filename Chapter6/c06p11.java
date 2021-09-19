@@ -25,9 +25,8 @@ public class c06p11 {
 					System.out.println("잘못된 명령입니다!");
 					continue;
 				}
-				
 				int index = sb.indexOf(tokens[0]);
-				if(index == -1) { // not found!
+				if(index == -1) {
 					System.out.println("찾을 수 없습니다!");
 					continue;
 				}
@@ -35,5 +34,6 @@ public class c06p11 {
 				System.out.println(sb.toString());
 			}
 		}
+		scanner.close();
 	}
 }
