@@ -3,9 +3,9 @@ package c06;
 //문제 10의 갬블링 게임을 n명이 하도록 수정하기
 import java.util.Scanner;
 
-class Person1 {
+class Person {
 	private String name;
-	public Person1(String name) {
+	public Person(String name) {
 		this.name = name;
 	}
 	public String getName() {
@@ -18,12 +18,12 @@ public class c06p12 {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("갬블링 게임에 참여할 선수 숫자>>");
 		int n = scanner.nextInt();
-		Person1[] p = new Person1[n];
+		Person[] p = new Person[n];
 		String name;
 		for(int i=0; i<p.length; i++) {
 			System.out.print((i+1) + "번째 선수 이름>>");
 			name = scanner.next();
-			p[i] = new Person1(name);
+			p[i] = new Person(name);
 		}
 		scanner.nextLine();
 		
