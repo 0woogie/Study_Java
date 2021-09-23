@@ -18,11 +18,11 @@ class MyStack<T> implements IStack<T> {
 		if(v.size() == 0)
 			return null;
 		else
-			return v.remove(0);
+			return v.remove(0); //맨 앞 요소 pop하기
 	}
 	@Override
 	public boolean push(T ob) {
-		v.add(0, ob);
+		v.add(0, ob); //맨 앞에 요소 push하기
 		return true;
 	}
 	
