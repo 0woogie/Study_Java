@@ -1,7 +1,7 @@
 package c07;
 //7장 9번
 //IStack<T> 인터페이스를 구현하는 MyStack<T> 클래스 작성하기
-import java.util.Vector;
+import java.util.ArrayList;
 
 interface IStack<T> {
 	T pop();
@@ -9,20 +9,20 @@ interface IStack<T> {
 }
 
 class MyStack<T> implements IStack<T> {
-	Vector<T> v = null;
+	ArrayList<T> a = null;
 	MyStack() {
-		v = new Vector<T>();
+		a = new ArrayList<T>();
 	}
 	@Override
 	public T pop() {
-		if(v.size() == 0)
+		if(a.size() == 0)
 			return null;
 		else
-			return v.remove(0); //맨 앞 요소 pop하기
+			return a.remove(0); //맨 앞 요소 pop하기
 	}
 	@Override
 	public boolean push(T ob) {
-		v.add(0, ob); //맨 앞에 요소 push하기
+		a.add(0, ob); //맨 앞에 요소 push하기
 		return true;
 	}
 	
